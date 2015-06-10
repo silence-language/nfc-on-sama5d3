@@ -1,0 +1,808 @@
+
+pcsc.c,184
+void pcsc_building_atr(25,260
+static int pcsc_param_data_object(182,4583
+static int pcsc_xfr_handler(334,8795
+static void pcsc_set_timer(431,11351
+int pcsc_cmd_dispatch(462,12148
+
+debug.h,275
+#define DEBUG_H3,17
+#define Debug7,61
+#define LEVEL1 9,76
+#define LEVEL2 10,93
+#define LEVEL3 11,110
+#define LEVEL4 12,127
+#define pprintk(17,160
+#define pprintk(23,339
+#define TRACE_TO(26,374
+#define WARN_TO(27,421
+#define	ERROR_TO(28,468
+#define INFO_TO(29,515
+
+spi.c,307
+static unsigned bufsiz 26,543
+static void spidev_complete(30,689
+spidev_sync(36,770
+static inline ssize_t spidev_sync_write(60,1307
+static inline ssize_t spidev_sync_read(74,1631
+int  spi_write_private(89,1956
+int spi_write_then_read_private(110,2446
+int spi_init(115,2695
+void spi_uninit(121,2855
+
+iso14444.h,430
+#define PART4_H7,27
+#define SLOTERROR_T1_3RETRY_FAIL_RESYNCH_PASS 15,77
+#define SLOTERROR_T1_3RETRY_FAIL_RESYNCH_FAIL 16,128
+#define SLOTERROR_T1_CHECKSUM_ERROR 17,179
+#define SLOTERROR_T1_OTHER_ERROR 18,230
+#define SLOTERROR_T1_LEN_INF_CONFLICT 19,281
+#define SLOTERROR_TCL_3RETRANSMIT_FAIL 21,334
+#define SLOTERROR_TCL_3RETRY_TIMEOUT 22,378
+#define SLOTERROR_TCL_BLOCK_INVALID 23,422
+#define APDURECLENTHREHOLD 27,472
+
+ccid_picc.c,529
+static u8 ccid_get_picc_status(6,27
+static void ccid_picc_power_on(16,281
+static void ccid_picc_power_off(28,530
+static void ccid_picc_get_slot_status(39,761
+static void ccid_picc_xfr_block(48,963
+static void ccid_picc_get_parameters(64,1488
+static void ccid_picc_set_parameters(92,2199
+static void ccid_picc_reset_parameters(97,2317
+static void ccid_picc_escape(102,2437
+static struct ccid_operations ccid_picc_ops 107,2510
+int picc_interrput_in(119,2902
+void ccid_picc_init(127,3080
+void ccid_picc_uninit(141,3375
+
+pn512.h,5347
+#define PN512_H5,19
+#define PageReg	18,226
+#define CommandReg	19,277
+#define IRqInv	21,304
+#define TxIEn	22,329
+#define RxIEn	23,353
+#define IdleIEn	24,377
+#define HiAlertIEn	25,403
+#define LoAlertIEn	26,431
+#define ErrIEn	27,459
+#define TimerIEn	28,484
+#define CommIEnReg	29,510
+#define DivIEnReg	31,537
+#define Set1	33,563
+#define TxIRq	34,586
+#define RxIRq	35,610
+#define IdleIRq	36,634
+#define HiAlertIRq	37,660
+#define LoAlertIRq	38,688
+#define ErrIRq	39,716
+#define TimerIRq	40,741
+#define CommIRqReg	41,767
+#define DivIRqReg	43,833
+#define WrErr	45,859
+#define TempErr	46,883
+#define RFErr	47,909
+#define BufferOvfl	48,933
+#define CollErr	49,961
+#define CRCErr	50,987
+#define ParityErr	51,1012
+#define ProtocolErr	52,1039
+#define ErrorReg	53,1068
+#define IRq	55,1170
+#define Status1Reg	56,1193
+#define MFCrypto1On	58,1221
+#define	ModemStateMask	59,1250
+#define Status2Reg	60,1279
+#define FIFODataReg	62,1309
+#define FlushBuffer	64,1337
+#define FIFOLevelReg	65,1366
+#define WaterLevelReg	67,1394
+#define TStopNow	69,1423
+#define TStartNow	70,1449
+#define WrNFCIDtoFIFO	71,1476
+#define Initiator	72,1506
+#define RxLastBitsMask	73,1533
+#define ControlReg	74,1562
+#define StartSend	76,1623
+#define BitFramingReg	77,1650
+#define CollReg	79,1721
+#define MSBFirst	82,1797
+#define DetectSync	83,1823
+#define ModeReg	84,1851
+#define TxCRCEn	86,1876
+#define TxModeReg	87,1902
+#define RxCRCEn	89,1928
+#define RxMultiple	90,1954
+#define RxModeReg	91,1982
+#define TxControlReg	93,2008
+#define InitialRFOn	95,2036
+#define TxAutoReg	96,2065
+#define TxSelReg	98,2091
+#define RxSelReg	99,2115
+#define RxThresholdReg	100,2139
+#define DemodReg	101,2168
+#define FelNFC1Reg	102,2192
+#define FelNFC2Reg	103,2218
+#define MifNFCReg	104,2244
+#define ParityDisable	106,2270
+#define ManualRCVReg	107,2300
+#define TypeBReg	109,2328
+#define SerialSpeedReg	110,2352
+#define CRCResultMSB	113,2433
+#define CRCResultLSB	114,2460
+#define GsNOffReg	115,2487
+#define ModWidthReg	116,2512
+#define TxBitPhaseReg	117,2539
+#define RFCfgReg	118,2567
+#define GsNOnReg	119,2591
+#define CWGsPReg	120,2615
+#define ModGsPReg	121,2639
+#define TAuto	123,2665
+#define TAutoRestart	124,2757
+#define TModeReg	125,2857
+#define TPrescalerReg	127,2919
+#define TReloadVal_Hi	129,2948
+#define TReloadVal_Lo	130,2976
+#define TCounterVal_Hi	131,3004
+#define TCounterVal_Lo	132,3033
+#define TestSel1Reg	135,3113
+#define TestSel2Reg	136,3140
+#define TestPinEnReg	137,3167
+#define TestPinValueReg	138,3194
+#define TestBusReg	139,3224
+#define AutoTestReg	140,3250
+#define VersionReg	141,3277
+#define AnalogTestReg 142,3303
+#define TestDAC1Reg	143,3332
+#define TestDAC2Reg	144,3359
+#define TestADCReg	145,3386
+#define CMD_IDLE 149,3466
+#define CMD_CONFIG 150,3543
+#define CMD_GENERATE_RANDOMID 151,3579
+#define CMD_CALCCRC 152,3615
+#define CMD_TRANSMIT 153,3651
+#define CMD_NOCMDCHANGE 154,3687
+#define CMD_RECEIVE 155,3723
+#define CMD_TRANSCEIVE 156,3759
+#define CMD_TRANSCEIVE_TO 157,3795
+#define CMD_AUTOCOLL 158,3831
+#define CMD_MFAUTHENT 159,3867
+#define CMD_SOFTRESET 160,3903
+#define FSDLENTH 164,3942
+#define CONFIGNOTHING 167,3976
+#define CONFIGTYPEA 168,4001
+#define CONFIGTYPEB 169,4026
+#define ERROR_NOTAG 171,4052
+#define ERROR_PROTOCOL 172,4087
+#define ERROR_PARITY 173,4122
+#define ERROR_BUFOVFL 174,4157
+#define ERROR_CRC 175,4192
+#define ERROR_COLL 176,4227
+#define ERROR_SERNR 177,4262
+#define ERROR_BYTECOUNT 178,4297
+#define ERROR_BITCOUNT 179,4332
+#define ERROR_WRONGPARAM 180,4367
+#define ERROR_ATSLEN 181,4403
+#define ERROR_FSDLENTH 182,4439
+#define ERROR_UNKNOW_COMMAND 183,4475
+#define ERROR_INVALID_DATA 184,4511
+#define ERROR_SPEED 185,4547
+#define ERROR_CID 186,4583
+#define BModeIndex 190,4622
+#define RxAThres106 191,4650
+#define RxAThres212 192,4678
+#define RxAThres424 193,4706
+#define RxAThres848 194,4734
+#define RxBThres106 195,4762
+#define RxBThres212 196,4790
+#define RxBThres424 197,4818
+#define RxBThres848 198,4846
+#define ARFAmpCfg106 199,4874
+#define ARFAmpCfg212 200,4902
+#define ARFAmpCfg424 201,4931
+#define ARFAmpCfg848 202,4960
+#define BRFAmpCfg106 203,4989
+#define BRFAmpCfg212 204,5018
+#define BRFAmpCfg424 205,5047
+#define BRFAmpCfg848 206,5076
+#define TypeACWGsP 207,5105
+#define TypeBCWGsP 208,5134
+enum request_direction213,5167
+	TRANSMIT 215,5192
+	RECEIVE,216,5207
+	TRANSCEIVE,217,5217
+struct pn512_request220,5234
+	u8			buf[buf222,5257
+	u32			length;223,5274
+	u32			actual;225,5290
+	u32			bit_numbers;226,5305
+	u8			command;227,5325
+	u8			bit_frame;228,5340
+	enum request_direction		direction;229,5357
+	u8			timer_start_now:timer_start_now232,5396
+	u8			timer_start_auto:timer_start_auto233,5421
+	u32			time_out;236,5514
+	u8			rx_last_bits;238,5532
+	u8			tx_done:tx_done240,5553
+	int				error_code;241,5570
+	void			*done_data;done_data243,5591
+	void			(*done)done244,5611
+struct pn512_common247,5656
+	struct spi_device	*spi_device;spi_device249,5678
+	struct spi_driver	*spi_driver;spi_driver250,5710
+	struct pn512_request	request;252,5743
+	u8			water_level;254,5775
+	struct work_struct	wq;256,5795
+	spinlock_t	pn512_lock;258,5820
+	struct completion	pn512_complete;260,5845
+	int				reset_pin;262,5881
+	int				intr_pin;263,5900
+	u8			intr_enable_mask;265,5919
+
+topaz.h,21
+#define TOPAZ_H6,25
+
+iso14443_typeA.c,232
+const u8 selectCmd[selectCmd17,219
+void typeA_halt(22,293
+static int typeA_cascade_anticollision 52,911
+int typeA_cascade_select(155,3859
+int typeA_request(208,4980
+int typeA_select(275,6555
+void typeA_polling_tags(378,9064
+
+common.h,272
+#define COMMON_H4,19
+typedef u8    BOOL;10,66
+#define TRUE 15,102
+#define FALSE 19,141
+#define SET_BIT(24,168
+#define CLEAR_BIT(25,216
+#define TOGGLE_BIT(26,267
+#define BITISSET(27,315
+#define BITISCLEAR(28,363
+#define MAKEWORD(31,419
+#define MAKEUINT32(32,479
+
+ccid.h,2807
+#define CCID_H4,17
+#define RDR_TO_PC_SLOTERROR_COMMAND_NOT_SUPPORTED	9,126
+#define RDR_TO_PC_SLOTERROR_CMD_ABORTED	10,188
+#define RDR_TO_PC_SLOTERROR_ICC_MUTE	11,278
+#define RDR_TO_PC_SLOTERROR_XFR_PARITY_ERROR	12,371
+#define RDR_TO_PC_SLOTERROR_XFR_OVERRUN	13,468
+#define RDR_TO_PC_SLOTERROR_HW_ERROR	14,563
+#define RDR_TO_PC_SLOTERROR_BAD_ATR_TS	15,657
+#define RDR_TO_PC_SLOTERROR_BAD_ATR_TCK	16,711
+#define RDR_TO_PC_SLOTERROR_ICC_PROTOCOL_NOT_SUPPORTED	17,766
+#define RDR_TO_PC_SLOTERROR_ICC_CLASS_NOT_SUPPORTED	18,833
+#define RDR_TO_PC_SLOTERROR_PROCEDURE_BYTE_CONFLICT	19,898
+#define RDR_TO_PC_SLOTERROR_DEACTIVATED_PROTOCOL	20,963
+#define RDR_TO_PC_SLOTERROR_BUSY_WITH_AUTO_SEQUENCE	21,1025
+#define RDR_TO_PC_SLOTERROR_PIN_TIMEOUT	22,1118
+#define RDR_TO_PC_SLOTERROR_PIN_CANCELLED	23,1174
+#define RDR_TO_PC_SLOTERROR_CMD_SLOT_BUSY	24,1231
+#define RDR_TO_PC_SLOTERROR_NONE	26,1429
+#define RDR_TO_PC_SLOTERROR_BAD_LENGTGH	27,1472
+#define RDR_TO_PC_SLOTERROR_SLOT_NO_EXIST	28,1521
+#define RDR_TO_PC_SLOTERROR_POWERSELECT_NO_SUPPORTED	29,1571
+#define RDR_TO_PC_SLOTERROR_PROTOCOL_INVALID_OR_NOT_SUPPORTED	30,1629
+#define RDR_TO_PC_SLOTERROR_BAD_LEVEL_PARAMETER	31,1694
+#define RDR_TO_PC_SLOTERROR_FI_DI_PAIR_INVALID_OR_NOT_SUPPORTED	32,1749
+#define RDR_TO_PC_SLOTERROR_INVALID_TCCKTS_PARAMETER	33,1817
+#define RDR_TO_PC_SLOTERROR_GUARD_TIME_NOT_SUPPORTED	34,1876
+#define RDR_TO_PC_SLOTERROR_WI_BWI_CWI_INVALID_OR_NOT_SUPPORTED	35,1935
+#define RDR_TO_PC_SLOTERROR_CLOCK_STOP_REQUEST_FALID	36,2003
+#define RDR_TO_PC_SLOTERROR_IFSC_SIZE_INVALID_OR_NOT_SUPPORTED	37,2062
+#define RDR_TO_PC_SLOTERROR_NAD_VALUE_INVALID_OR_NOT_SUPPORTED	38,2129
+#define RDR_TO_PC_ICCSTATUS_NONE	41,2247
+#define RDR_TO_PC_ICCSTATUS_ACTIVE	42,2289
+#define RDR_TO_PC_ICCSTATUS_INACTIVE	43,2355
+#define RDR_TO_PC_ICCSTATUS_NOICC	44,2424
+#define RDR_TO_PC_ICCSTATUS_RFU	45,2477
+struct ccid_msg_data 49,2522
+	unsigned char *sBuf;sBuf50,2545
+	unsigned char *rBuf;rBuf51,2567
+	unsigned int sLen;52,2589
+	unsigned int rLen;53,2609
+	unsigned int param;54,2629
+	unsigned char cardStatus;55,2650
+	unsigned char slot;56,2677
+	signed int errCode;57,2698
+struct ccid_operations 61,2724
+	void (*card_power_on)card_power_on62,2749
+	void (*card_power_off)card_power_off63,2797
+	void (*get_slot_status)get_slot_status64,2846
+	void (*xfr_block)xfr_block65,2896
+	void (*get_parameters)get_parameters66,2940
+	void (*reset_parameters)reset_parameters67,2989
+	void (*set_parameters)set_parameters68,3040
+	void (*escape)escape69,3089
+	void (*card_clock)card_clock70,3130
+	void (*t0_APDU)t0_APDU71,3175
+	void (*secure)secure72,3217
+	void (*mechanical)mechanical73,3258
+	void (*abort)abort74,3303
+	void (*set_data_rate_and_clock_frequency)set_data_rate_and_clock_frequency75,3343
+
+picc.h,3341
+#define PICC_H4,20
+#define PICC_ABSENT 15,151
+#define PICC_TYPEA_TCL 16,184
+#define PICC_MIFARE 17,259
+#define PICC_TYPEB_TCL 18,292
+#define PICC_ST_MEMERY 19,367
+#define PICC_TOPAZ 20,400
+#define PICC_FELICA212 21,433
+#define PICC_FELICA424 22,468
+#define PICC_ERRORCODE_NONE	26,507
+#define PICC_ERRORCODE_CMD_ABORTED	27,565
+#define PICC_ERRORCODE_MUTE	28,635
+#define PICC_ERRORCODE_XFR_PARITY_ERROR	29,697
+#define PICC_ERRORCODE_XFR_OVERRUN	30,776
+#define PICC_ERRORCODE_HW_ERROR	31,846
+#define PICC_ICCSTATUS_ACTIVE	33,916
+#define PICC_ICCSTATUS_INACTIVE	34,977
+#define PICC_ICCSTATUS_NOICC	35,1042
+struct pcd_device 41,1130
+#define TYPEA	44,1155
+#define	TYPEB	45,1196
+#define	FELICA212	46,1237
+#define	FELICA414	47,1285
+#define	TOPAZ	48,1333
+    u8			support_card_type;49,1374
+    u8			FSDI;52,1407
+    u8			max_speed;53,1559
+    u8			current_speed;54,1635
+    BOOL		piccPoll;55,1660
+    u8			PCB;59,1752
+    u8			CID;60,1767
+    u8			NAD;61,1782
+#define	AUTO_RATS	64,1801
+#define	AUTO_POLLING	65,1850
+#define POLLING_CARD_ENABLE	66,1901
+    u8			flags_polling;67,1958
+	u8			mifare_key[mifare_key70,1987
+    u16			poll_interval;73,2016
+	struct picc_device		*picc;picc75,2044
+enum picc_state79,2116
+	PICC_POWEROFF,81,2136
+	PICC_IDLE,82,2153
+	PICC_READY,83,2166
+	PICC_SELECTED,84,2180
+	PICC_ACTIVATED,85,2197
+	PICC_UPDATE,86,2215
+struct picc_device 89,2236
+#define PRESENT	91,2260
+#define ACTIVATED	92,2307
+#define CONNECTED	93,2357
+#define FIRST_INSERT	94,2407
+#define SLOT_CHANGE	95,2462
+    volatile u8		status;96,2516
+    enum picc_state		states;98,2544
+    u8 				type;99,2593
+    char				*name;name100,2629
+    u8 				support_part4;101,2649
+    u8 				sn[sn102,2704
+    u8 				sn_len;103,2819
+    u8 				ATQA[ATQA107,2868
+    u8 				SAK;108,2889
+    u8 				ATQB[ATQB112,2935
+    u8 				ATQB_len;113,2957
+    u8 				attrib_param[attrib_param114,2979
+    u8 				attrib_response[attrib_response115,3008
+    u8 				PAD[PAD119,3070
+    u8 				system_code[system_code120,3157
+    u8 				FWI;124,3274
+    u8 				SFGI;125,3428
+    u8 				FSCI;126,3618
+    u16 			FSC;127,3765
+    u8 				speed;128,3782
+    u8 				ATS[ATS129,3865
+#define PCD_BLOCK_NUMBER	132,3944
+#define CID_PRESENT	133,4008
+#define PCD_CHAINING	134,4065
+#define PICC_CHAINING	135,4122
+#define WTX_REQUEST	136,4180
+#define TYPEB_ATTRIB	137,4236
+#define WTX_REQ_BEFORE	138,4293
+#define NAD_PRESENT	139,4358
+	u8 				flags_TCL;140,4414
+	u8 				WTXM;142,4436
+	u8 				PCB;145,4514
+	u8 				NAD;146,4528
+	u8 				CID;147,4542
+    volatile u8			work_key[work_key151,4572
+    volatile u8			key_valid;152,4604
+    volatile u8			key_type;153,4634
+    volatile u8			key_No;154,4663
+    volatile u8			authen_need;155,4690
+    volatile u8			block;156,4722
+#define TXCRC	160,4762
+#define RXCRC	161,4809
+#define TXPARITY	162,4856
+#define RXPARITY	163,4908
+#define PROLOGUE	164,4960
+#define VENDORSPEC	165,5012
+		volatile u8 		flags_tx_rx;166,5072
+		volatile u8 		previous_cmd;168,5104
+		volatile u8			transfer_status;169,5135
+		volatile u8			flags_status;170,5169
+		volatile u8			last_rx_valid_bits;171,5200
+		volatile u8			last_tx_valid_bits;172,5237
+		volatile u8			next_cmd;173,5274
+	struct pn512_request	*request;request176,5305
+	struct pcd_device		*pcd;pcd177,5338
+
+iso14443_typeA.h,371
+#define TYPEA_H5,23
+#define PICC_REQA 15,77
+#define PICC_WUPA 16,126
+#define PICC_SELVL1 18,176
+#define PICC_SELVL2 19,220
+#define PICC_SELVL3 20,264
+#define PICC_HALT 22,310
+#define SAK_TYPEA_TCL 26,362
+#define SAK_MIFARE_1K 27,401
+#define SAK_MIFARE_4K 28,439
+#define SAK_MIFARE_ULTRALIGHT 29,477
+#define SAK_MIFARE_MINI 30,514
+#define SAK_SLE66R35 31,551
+
+pcsc.h,1669
+#define PCSC_H12,36
+#define MANAGE_SESSION 21,87
+#define TRANSPARENT_EXCHANGE 22,122
+#define SWITCH_PROTOCOL 23,157
+#define OJ_Idle 26,215
+#define CMD_DO_VERSIONDATA 28,279
+#define CMD_DO_STARTTRANS 29,319
+#define CMD_DO_ENDTRANS 30,359
+#define CMD_DO_TURNOFF_RF 31,399
+#define CMD_DO_TURNON_RF 32,439
+#define CMD_DO_TIMER 33,479
+#define CMD_DO_PARAMETERS 34,519
+#define CMD_DO_TRANSCEIVE_FLAG 36,596
+#define CMD_DO_TRANS_BIT_FRAM 37,638
+#define CMD_DO_REC_BIT_FRAM 38,680
+#define CMD_DO_TRANSMIT 39,722
+#define CMD_DO_RECEIVE 40,762
+#define CMD_DO_TRANSCEIVE_DATA 41,802
+#define CMD_DO_SWITCH_PROTOCOL 43,875
+#define RES_GENERICERR 45,929
+#define RES_VERSIONDATA 46,966
+#define RES_PARAMETERS 47,1003
+#define RES_NUMOFVALIDBITS 48,1040
+#define RES_RESPONSESTATUS 49,1077
+#define RES_ICCRESPONSE 50,1114
+#define ERROR_WARNING 55,1218
+#define ERROR_NOINF 56,1256
+#define ERROR_EXSTOP 57,1294
+#define ERROR_OBJECT_NOTSUPPORTED 58,1332
+#define ERROR_OBJECT_LENGTH 59,1370
+#define ERROR_OBJECT_VALUE 60,1408
+#define ERROR_NOIFDRES 61,1446
+#define ERROR_NOICCRES 62,1484
+#define ERROR_NOPRESIEDIAGNOSIS 63,1522
+#define SWCH_ISO14443_TYPEA 67,1630
+#define SWCH_ISO14443_TYPEB 68,1671
+#define SWCH_ISO15693 69,1712
+#define SWCH_FELICA 70,1753
+#define SWCH_ICODE_EPC_UID 71,1794
+#define SWCH_ICODE_1 72,1835
+#define SWCH_HF_EPC_G2_ISO18000_3 73,1876
+#define SWCH_INNOVATRON 74,1917
+#define SWCH_NO_LAYER_SEPARATION 76,1982
+#define SWCH_TO_LAYER_2 77,2023
+#define SWCH_TO_LAYER_3 78,2064
+#define SWCH_TO_LAYER_4 79,2105
+#define SWCH_TO_LAYER_2X 80,2146
+#define SWCH_TO_LAYER_3X 81,2187
+#define SWCH_TO_HIGHLEVEL_PROTOCOL 82,2228
+
+delay.h,22
+#define DELAY_H15,43
+
+iso14443_typeB.h,199
+#define TYPEB_H6,25
+#define PICC_REQB 15,144
+#define PICC_WUPB 16,208
+#define N_1_SLOT 19,276
+#define N_2_SLOT 20,305
+#define N_4_SLOT 21,334
+#define N_8_SLOT 22,363
+#define N_16_SLOT 23,392
+
+delay.c,167
+void Delay1us(10,79
+void Delay256us(15,133
+void Delay256P2us(27,286
+void Delay256P3us(39,442
+void Delay1ms(52,608
+void Delay1s(57,662
+void SetTimer100us(67,776
+
+topaz.c,326
+#define TOPAZ_RID	22,241
+#define TOPAZ_RALL	23,268
+#define TOPAZ_READ	24,296
+#define TOPAZ_WRITE_E	25,324
+#define TOPAZ_WRITE_NE	26,354
+static int topaz_parity_check(30,391
+static int topaz_transceive_handler(114,1504
+static int topaz_get_rid(199,3435
+void topaz_polling_tags(231,4292
+int topaz_xfr_handler(260,4978
+
+pcd_config.c,1024
+u8 RCRegFactor[RCRegFactor13,84
+static const u8 CfgTbl_AGen[CfgTbl_AGen25,371
+static const u8 CfgTbl_A106Tx[CfgTbl_A106Tx37,632
+static const u8 CfgTbl_A106Rx[CfgTbl_A106Rx44,786
+static const u8 CfgTbl_A212Tx[CfgTbl_A212Tx50,917
+static const u8 CfgTbl_A212Rx[CfgTbl_A212Rx57,1015
+static const u8 CfgTbl_A424Tx[CfgTbl_A424Tx63,1090
+static const u8 CfgTbl_A424Rx[CfgTbl_A424Rx70,1189
+static const u8 CfgTbl_A848Tx[CfgTbl_A848Tx76,1264
+static const u8 CfgTbl_A848Rx[CfgTbl_A848Rx83,1362
+static const u8 CfgTbl_BGen[CfgTbl_BGen93,1566
+static const u8 CfgTbl_B106Tx[CfgTbl_B106Tx104,1774
+static const u8 CfgTbl_B106Rx[CfgTbl_B106Rx111,1870
+static const u8 CfgTbl_B212Tx[CfgTbl_B212Tx118,1966
+static const u8 CfgTbl_B212Rx[CfgTbl_B212Rx126,2064
+static const u8 CfgTbl_B424Tx[CfgTbl_B424Tx133,2160
+static const u8 CfgTbl_B424Rx[CfgTbl_B424Rx140,2256
+static const u8 CfgTbl_B848Tx[CfgTbl_B848Tx147,2352
+static const u8 CfgTbl_B848Rx[CfgTbl_B848Rx154,2448
+void pcd_config_iso14443_card(162,2546
+
+iso14443_typeB.c,242
+int typeB_request(21,208
+static int typeB_slot_marker(74,1411
+static void typeB_ATQB_analysis(131,2774
+static int typeB_attrib(204,4623
+static int typeB_standard_attrib(253,5711
+int typeB_halt(279,6498
+void typeB_polling_tags(325,7476
+
+felica.c,674
+static const u8 gaFelRFCon[gaFelRFCon14,124
+static const u8 CfgTbl_Pas106i[CfgTbl_Pas106i16,222
+static const u8 CfgTbl_Pas212i[CfgTbl_Pas212i34,761
+static const u8 CfgTbl_Pas424i[CfgTbl_Pas424i50,1126
+static const u8 CfgTbl_Act106i[CfgTbl_Act106i65,1465
+static const u8 CfgTbl_Act212i[CfgTbl_Act212i84,2037
+static const u8 CfgTbl_Act424i[CfgTbl_Act424i103,2494
+static void nfc_init_config(127,2961
+static INT32 FelicaBulkTransceive(181,4642
+static int felica_request_REQC(295,7836
+void felica_polling_tags(367,9825
+static void felica_timer_set(401,10724
+int felica_request_response(485,13256
+int FelXfrHandle(531,14194
+int felica_xfr_handler(578,15201
+
+felica.h,1490
+#define FELICA_H8,30
+#define PASSDEPI_106 16,81
+#define PASSDEPT_106 17,111
+#define PASSDEPI_212 18,141
+#define PASSDEPT_212 19,171
+#define PASSDEPI_424 20,201
+#define PASSDEPT_424 21,231
+#define ACTDEPI_106 22,261
+#define ACTDEPT_106 23,291
+#define ACTDEPI_212 24,321
+#define ACTDEPT_212 25,351
+#define ACTDEPI_424 26,381
+#define ACTDEPT_424 27,411
+#define CMD_REQC 30,497
+#define RES_REQC 31,536
+#define CMD_REQSERVICE 32,575
+#define RES_REQSERVICE 33,614
+#define CMD_REQRESPONSE 34,653
+#define RES_REQRESPONSE 35,692
+#define CMD_READ_NONEAUTH 36,731
+#define RES_READ_NONEAUTH 37,770
+#define CMD_WRITE_NONEAUTH 38,809
+#define RES_WRITE_NONEAUTH 39,848
+#define CMD_AUTH1 40,887
+#define RES_AUTH1 41,926
+#define CMD_AUTH2 42,965
+#define RES_AUTH2 43,1004
+#define CMD_READFROMSECURE 44,1043
+#define RES_READFROMSECURE 45,1082
+#define CMD_WRITETOSECURE 46,1121
+#define RES_WRITETOSECURE 47,1160
+#define CODE_TIMESLOTNUMBER_1 49,1201
+#define CODE_TIMESLOTNUMBER_2 50,1276
+#define CODE_TIMESLOTNUMBER_4 51,1351
+#define CODE_TIMESLOTNUMBER_8 52,1426
+#define CODE_TIMESLOTNUMBER_16 53,1501
+#define FELICA_APPLICATION_ALL 55,1579
+#define     RF_FEL_CON_LEN 63,1700
+#define     FEL2_CON_ModGsP 64,1735
+#define     FEL2_CON_RxThres 65,1770
+#define     FEL2_CON_RFCfg 66,1805
+#define     FEL2_CON_CWGsP 67,1840
+#define     FEL4_CON_ModGsP 68,1875
+#define     FEL4_CON_RxThres 69,1910
+#define     FEL4_CON_RFCfg 70,1945
+#define     FEL4_CON_CWGsP 71,1980
+
+spi.h,321
+#define _SPI_H2,15
+struct spidev_data 6,113
+	dev_t			devt;7,134
+	spinlock_t		spi_lock;8,149
+	struct spi_device	*spi;spi9,172
+	struct list_head	device_entry;10,197
+	struct mutex		buf_lock;13,299
+	unsigned		users;14,324
+	u8			*tx_buffer;tx_buffer15,342
+	u8			*rx_buffer;rx_buffer16,360
+	u32			speed_hz;17,378
+
+iso14444.c,649
+const u16 fsdi_to_fsd[fsdi_to_fsd18,254
+static const u8 fwi_table[fwi_table21,325
+const u16 fsdi_to_fsd_convertion[fsdi_to_fsd_convertion71,1157
+u8 tempIBlockBuf[tempIBlockBuf74,1239
+int typeA_request_ats(82,1429
+static void typeA_sfg_delay(191,5056
+void typeA_set_timeout(256,6716
+u8 typeA_speed_check(306,8047
+void typeA_high_speed_config(374,9847
+void typeA_prologue_feild_load(417,11635
+void typeA_pps_check_and_send(447,12295
+int typeA_select_(487,13300
+int typeA_deselect_request(524,14089
+static int typeA_rblock_command(573,15296
+static int typeA_data_send_error_check(606,16040
+int typeA_standard_apdu_handler(910,26432
+
+mifare.h,347
+#define MIFARE_H7,28
+#define PICC_MF_KEY_A 16,81
+#define PICC_MF_KEY_B 17,152
+#define PICC_MF_READ 18,223
+#define PICC_MF_WRITE_16_BYTES 19,278
+#define PICC_MF_WRITE_4_BYTES 20,343
+#define PICC_MF_INCREMENT 21,407
+#define PICC_MF_RESTORE 22,467
+#define PICC_MF_DECREMENT 23,525
+#define PICC_MF_TRANSFER 24,585
+#define SLOT_ERROR 27,642
+
+pcd.c,1311
+struct pcd_param25,499
+    u8 *p_iBuf;p_iBuf27,518
+    u8 *p_oBuf;p_oBuf28,534
+    u32  iDataLen;29,550
+    u32  oDataLen;30,569
+    u32 statusCode;31,588
+#define  Card_PowerOn 35,613
+#define  Card_PowerOff 36,644
+#define  Card_XfrAPDU 37,675
+struct pcd_common45,805
+	struct pcd_device		pcd;47,825
+	struct picc_device		picc;48,850
+	struct semaphore	mutex;50,878
+	u8	sem_inc;51,903
+	struct workqueue_struct 	*polling;polling52,916
+	int 		(*slot_changed_notify)slot_changed_notify54,953
+	void		*private_data;private_data55,996
+struct pcd_common		*common common59,1023
+static long pcd_ioctl(67,1140
+static int pcd_open(193,4311
+static int pcd_release(202,4501
+void run_picc_poll(214,4705
+static struct file_operations pcd_fops=246,5297
+int spidev_init_open(348,8398
+void spidev_uninit(407,9911
+int nfc_major 431,10468
+int nfc_minor 432,10487
+dev_t nfcdev;433,10506
+struct spi_device *spi_device_for_pn512;spi_device_for_pn512438,10660
+static int spidev_probe(441,10756
+static int spidev_remove(527,13513
+static const struct of_device_id spidev_dt_ids[spidev_dt_ids549,14068
+static struct spi_driver spidev_spi_driver 554,14162
+static int pcd_init(569,14609
+static int __init spidev_init(624,16158
+static void pcd_exit(643,16599
+static void __exit spidev_exit(671,17037
+
+crc.c,90
+#define CRC_A 7,31
+#define CRC_B 8,51
+void CRCReg_Update(11,75
+void ComputeCrc(20,260
+
+mifare.c,376
+int mifare_select(15,153
+static int mifare_authen_analyze(66,1254
+static int mifare_check_read_write_len(105,2146
+static int mifare_authen(147,3174
+static int mifare_block_check(179,3813
+static int mifare_block_read(228,5174
+static int mifare_block_write(266,5934
+static int mifare_inc_dec(374,8110
+int mifare_pcsc_command(456,9768
+void mifare_type_coding(924,23403
+
+pcd_config.h,468
+#define PCD_CONFIG_H3,24
+#define TYPEA_106TX 6,50
+#define TYPEA_106RX 7,79
+#define TYPEA_212TX 8,108
+#define TYPEA_212RX 9,137
+#define TYPEA_424TX 10,166
+#define TYPEA_424RX 11,195
+#define TYPEA_848TX 12,224
+#define TYPEA_848RX 13,253
+#define TYPEB_106TX 15,284
+#define TYPEB_106RX 16,313
+#define TYPEB_212TX 17,342
+#define TYPEB_212RX 18,371
+#define TYPEB_424TX 19,400
+#define TYPEB_424RX 20,429
+#define TYPEB_848TX 21,458
+#define TYPEB_848RX 22,487
+
+picc.c,841
+static const u8 vendorName[vendorName21,287
+static const u8 productName[productName22,335
+static const u8 driverVersion[driverVersion23,399
+static const u8 firmwareVersion[firmwareVersion24,455
+const u8 IFDVersion[IFDVersion25,543
+const u16 FSCConvertTbl[FSCConvertTbl27,588
+void picc_wait_for_req(35,664
+    u8 NO;49,865
+    u8 *UID;UID50,876
+    BOOL  used;51,889
+}CIDInfo;CIDInfo52,905
+CIDInfo CIDNO[CIDNO54,916
+static void cid_init(56,936
+static void free_cid(68,1107
+u8 get_cid(76,1206
+void picc_reset(108,1685
+static void picc_polling_tags(117,1880
+static int picc_power_on(346,8531
+static void picc_power_off(413,10008
+static u8 bsi_cmd_dispatch(449,10833
+static int picc_command_exchange(530,12744
+static int picc_param_init(748,19472
+static int picc_init(787,21055
+static void picc_uninit(799,21426
+
+pn512.c,950
+#define SPI_DEVICE_NAME	20,312
+#define SPI_DEVICE_RESET_GPIO	21,348
+#define SPI_DEVICE_IRQ_GPIO	22,394
+#define PN512_FIFO_MAX_DEEPTH	25,440
+#define PN512_FIFO_MAX_FIFO_ALLOWED	26,475
+#define PN512_FIFO_WATER_LEVEL	27,515
+struct pn512_common *pn512 pn51231,554
+int pn512_reg_write(38,595
+u8 pn512_reg_read(65,1010
+void pn512_reg_clear(92,1518
+void pn512_reg_set(101,1672
+int pn512_fifo_write(111,1828
+int pn512_fifo_read(146,2358
+void set_pn512_timer(187,2989
+void turn_on_antenna(196,3432
+void turn_off_antenna(201,3502
+void pn512_process_done(205,3572
+void pn512_process_request(222,3969
+static void pn512_irq_work_queue(359,7087
+static irqreturn_t pn512_interrupt(534,10686
+static int pn512_probe(545,10841
+static INT32 __devexit pn512_remove(635,12903
+static struct spi_device_id pn512_id_table[pn512_id_table648,13210
+static struct spi_driver pn512_driver 662,13354
+int pn512_init(679,13729
+int pn512_uninit(827,17568

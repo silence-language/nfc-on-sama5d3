@@ -1,0 +1,6 @@
+#ifndef _SPI_H
+#define _SPI_H
+int  spi_write(struct spi_device *device, u8 *in_buf, u32 in_len);
+int spi_write_then_read(struct spi_device *device, u8 *in_buf, u32 in_len, u8 *out_buf, u32 out_len);
+int spi_init(spi_device *spi);
+#endif

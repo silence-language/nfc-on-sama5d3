@@ -1,0 +1,1 @@
+cmd_/home/tao/work/sama5d3/pos/contactless-driver-master/mod/pcdm.ko := arm-buildroot-linux-uclibcgnueabihf-ld -r  -T ./scripts/module-common.lds --build-id  -o /home/tao/work/sama5d3/pos/contactless-driver-master/mod/pcdm.ko /home/tao/work/sama5d3/pos/contactless-driver-master/mod/pcdm.o /home/tao/work/sama5d3/pos/contactless-driver-master/mod/pcdm.mod.o
