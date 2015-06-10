@@ -1,1 +1,0 @@
-cmd_/home/tao/work/sama5d3/pos/contactless-driver-master/mod/built-in.o :=  rm -f /home/tao/work/sama5d3/pos/contactless-driver-master/mod/built-in.o; arm-buildroot-linux-uclibcgnueabihf-ar rcsD /home/tao/work/sama5d3/pos/contactless-driver-master/mod/built-in.o
