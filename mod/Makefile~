@@ -24,6 +24,8 @@ pcdm-objs := 	delay.o pcd_config.o pn512.o spi.o\
 KERNELDIR?=/home/tao/work/sama5d3/pos/linux-3.19.5/
 modules:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD)
+	cp pcdm.ko /nfs/
+	sync
 #	@echo 'copy pcdm.ko to share file folder'
 #	@cp -f *.ko /mnt/hgfs/sharefiles
 #	@echo 'Module pcdm.ko already generated'

@@ -32,4 +32,4 @@ modules:
 
 clean:
 	rm -rf $(srcdir)*.o $(srcdir)*.mod.o $(srcdir)*.ko $(srcdir)*.mod.c \
-	*.o *.mod.o *.ko *.mod.c *.symvers *.order
+	*.o *.mod.o *.ko *.mod.c *.symvers *.order *.o.cmd
